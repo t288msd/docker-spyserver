@@ -10,7 +10,6 @@ RUN wget https://airspy.com/?ddownload=5795 -O spyserver-linux-arm64.tgz;\
     tar xvzf spyserver-linux-arm64.tgz;\
     rm spyserver-linux-arm64.tgz;
  
-
 RUN mv spyserver spyserver_ping /usr/bin && \
     mkdir -p /etc/spyserver && \
     mv spyserver.config /etc/spyserver
