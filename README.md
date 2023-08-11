@@ -48,11 +48,6 @@ This will create a directory called spyserver and install 5 files.
 7. startup SDRSharp or similar on your PC. change the Source to `sdr://<pi4 ip address>:5555` eg. sdr://192.168.1.213:5555
    
 and bob is hopefully your uncle!
-
-
-
-
-
-
-
-NTS: run `make` and then push to dockerhub
+.
+.
+(NTS: run `make` and then push to dockerhub)
