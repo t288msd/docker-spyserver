@@ -35,4 +35,12 @@ All configuration for this Docker container is done via environmental variables 
 |`BUFFER_SIZE_MS`          |`50`           |Buffer Size (in milliseconds)|
 |`BUFFER_COUNT`            |`10`           |Buffer Count|
 
+### Installation
+To install on your Pi 4:
+1. Install docker:   https://docs.docker.com/engine/install/raspberry-pi-os/
+2. Copy this code to your pi using command:   git clone git@github.com:t288msd/spyserver.git
+This will create a directory called spyserver and install 5 files.
 
+3. cd to the spyserver directory
+4. adjust the docker-compose.yml to your required settings
+5. download the image and start the container: docker compose up -d
