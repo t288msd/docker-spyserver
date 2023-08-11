@@ -2,9 +2,9 @@
 
 Docker container for [AirSpy SpyServer](https://airspy.com/download), with support for arm64 (including Raspberry pi 4).
 
-Forked from Lloyd Pick's version for AMD64 and ARM32 without which I couldn't have built this. Thanks Lloyd!
+Copied from Lloyd Pick's version for AMD64 and ARM32 without which I couldn't have built this. Thanks Lloyd!
 
-If you have an AMD64 or ARM32 try Lloyd's repository at https://github.com/lloydpick/docker-spyserver (The last update at time of writing was 2019)
+If you have an AMD64 or ARM32 try [Lloyd's repository](https://github.com/lloydpick/docker-spyserver) (The last update at time of writing was 2019)
 
 
 ## Summary
