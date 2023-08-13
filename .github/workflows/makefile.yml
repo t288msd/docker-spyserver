@@ -1,7 +1,7 @@
 build:
 	docker build -t t288msd/spyserver -f Dockerfile --build-arg TARGETPLATFORM=linux/arm64 .
 
-run:
+run: 
 	docker run -it --rm \
 	-e LIST_IN_DIRECTORY=0 \
 	spyserver
