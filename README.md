@@ -38,13 +38,13 @@ All configuration for this Docker container is done via environmental variables 
 ### Installation
 To install on your Pi 4:
 1. If you don't already have docker, install it:   https://docs.docker.com/engine/install/raspberry-pi-os/
-2. From your /home/pi directory or similar run:  `git clone git@github.com:t288msd/spyserver.git`
-This will create a directory called spyserver and install 5 files, (only one of which you really need, docker-compose.yml)
+2. From your /home/pi directory or similar run:  `git clone git@github.com:t288msd/docker-spyserver.git`
+This will create a directory called docker-spyserver and install 5 files, (only one of which you really need, docker-compose.yml)
 
-3. `cd` to the spyserver directory
+3. `cd` to the docker-spyserver directory
 4. adjust the `docker-compose.yml` to your required settings (defaults typically work)
 5. Run: `docker compose up -d` which will download the image and start the container
-6. Check the docker compose logs and fix the errors `docker logs spyserver` ("[R82XX] PLL not locked!" is normal and not an error)
+6. Check the docker compose logs and fix the errors `docker logs docker-spyserver` ("[R82XX] PLL not locked!" is normal and not an error)
 7. Start SDRSharp or similar on your PC. Change the Source to `sdr://<pi4 ip address>:5555` eg. sdr://192.168.1.213:5555
    
 and if all is well you can tune it the frequency of choice!
