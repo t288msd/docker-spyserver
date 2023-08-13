@@ -1,27 +1,12 @@
-name: Makefile CI
+build:
+	docker build -t t288msd/spyserver -f Dockerfile --build-arg TARGETPLATFORM=linux/arm64 .
 
-on:
-  push:
-    branches: [ "master" ]
-  pull_request:
-    branches: [ "master" ]
+run:
+	docker run -it --rm \
+	-e LIST_IN_DIRECTORY=0 \
+	spyserver
 
-jobs:
-  build:
+buildx:
+	docker buildx build --platform linux/arm/v8 -t t288msd/spyserver --push .
 
-    runs-on: ubuntu-latest
-
-    steps:
-    - uses: actions/checkout@v3
-
-    - name: configure
-      run: ./configure
-
-    - name: Install dependencies
-      run: make
-
-    - name: Run check
-      run: make check
-
-    - name: Run distcheck
-      run: make distcheck
+.PHONY: build
