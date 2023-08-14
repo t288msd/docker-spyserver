@@ -7,6 +7,6 @@ run:
 	spyserver
 
 buildx:
-	docker buildx build --platform linux/arm/v8 -t t288msd/spyserver --push .
+	docker buildx build --platform linux/amd64,linux/arm64,linux/arm/v7 -t t288msd/spyserver --push .
 
 .PHONY: build
