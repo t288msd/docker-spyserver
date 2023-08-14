@@ -32,6 +32,9 @@ jobs:
     - name: Run the makefile to make the image and push it to DockerHub
       run: make build push
 
+    - name: tag the image so it can be sent to gchr.io
+      run: docker tag . ghcr.io/t288msd/docker-spyserver:latest
+
     - name: push to ghcr.io
       run: docker push ghcr.io/t288msd/docker-spyserver:latest
     
