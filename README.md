@@ -1,7 +1,7 @@
 # Docker AirSpy SpyServer
 
 Docker container for [AirSpy SpyServer](https://airspy.com/download), with support for arm64 (including Raspberry pi 4).
-Connect over the lan from your PC with SDRSharp or your client of choice. Unlike other versions this gives full control to the client to choose channel/frequency. 
+Connect over the lan from your PC with SDRSharp or your client of choice. Unlike other versions this gives full control to the client to change channel/frequency. 
 
 Copied from Lloyd Pick's version for AMD64 and ARM32 without which I couldn't have built this. Thanks Lloyd!
 If you have an AMD64 or ARM32 try [Lloyd's repository](https://github.com/lloydpick/docker-spyserver) (The last update at time of writing was 2019)
