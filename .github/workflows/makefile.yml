@@ -33,7 +33,7 @@ jobs:
       run: make build push
 
     - name: tag the image so it can be sent to gchr.io
-      run: docker tag . ghcr.io/t288msd/docker-spyserver:latest
+      run: docker tag docker-spyserver ghcr.io/t288msd/docker-spyserver:latest
 
     - name: push to ghcr.io
       run: docker push ghcr.io/t288msd/docker-spyserver:latest
