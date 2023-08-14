@@ -50,6 +50,4 @@ This will create a directory called docker-spyserver and install 5 files, (only 
 and if all is well you can tune it the frequency of choice!
 
 PS. be sure to blacklist the default drivers and install rtl-sdr specific drivers 
-.
-.
-(NTS: run `make build push`)
+
