@@ -2,9 +2,9 @@
 
 Docker container for [AirSpy SpyServer](https://airspy.com/download), with support for arm64 (including Raspberry pi 4).
 
-Forked from Lloyd Pick's version for AMD64 and ARM32 without which I couldn't have built this. Thanks Lloyd!
+Copied from Lloyd Pick's version for AMD64 and ARM32 without which I couldn't have built this. Thanks Lloyd!
 
-If you have an AMD64 or ARM32 try Lloyd's repository at https://github.com/lloydpick/docker-spyserver (The last update at time of writing was 2019)
+If you have an AMD64 or ARM32 try [Lloyd's repository](https://github.com/lloydpick/docker-spyserver) (The last update at time of writing was 2019)
 
 
 ## Summary
@@ -37,13 +37,19 @@ All configuration for this Docker container is done via environmental variables 
 
 ### Installation
 To install on your Pi 4:
-1. Install docker:   https://docs.docker.com/engine/install/raspberry-pi-os/
-2. Copy this code to your pi using command:   git clone git@github.com:t288msd/spyserver.git
-This will create a directory called spyserver and install 5 files.
+1. If you don't already have docker, install it:   https://docs.docker.com/engine/install/raspberry-pi-os/
+2. From your /home/pi directory or similar run:  `git clone git@github.com:t288msd/docker-spyserver.git`
+This will create a directory called docker-spyserver and install 5 files, (only one of which you really need, docker-compose.yml)
 
-3. cd to the spyserver directory
-4. adjust the docker-compose.yml to your required settings
-5. download the image and start the container using: docker compose up -d
-6. look at the docker compose logs and fix the errors
-7. startup SDRSharp or similar on your PC. change the Source to sdr://<pi4 ip address>:5555 eg. sdr://192.168.1.213:5555
-and bob is hopefully your uncle!
+3. `cd` to the docker-spyserver directory
+4. adjust the `docker-compose.yml` to your required settings (defaults typically work)
+5. Run: `docker compose up -d` which will download the image and start the container
+6. Check the docker compose logs and fix the errors `docker logs docker-spyserver` ("[R82XX] PLL not locked!" is normal and not an error)
+7. Start SDRSharp or similar on your PC. Change the Source to `sdr://<pi4 ip address>:5555` eg. sdr://192.168.1.213:5555
+
+and if all is well you can tune it the frequency of choice!
+
+PS. be sure to blacklist the default drivers and install rtl-sdr specific drivers 
+.
+.
+(NTS: run `make` and then push to dockerhub)
