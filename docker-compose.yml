@@ -9,7 +9,7 @@ services:
       - BIND_PORT=5555
     ports:
       - "5555:5555"
-    image: t288msd/spyserver:latest
+    image: t288msd/spyserver
     devices:
       - "/dev/bus/usb"
     cap_add:
