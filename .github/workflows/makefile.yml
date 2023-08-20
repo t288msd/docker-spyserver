@@ -1,4 +1,4 @@
-name: Makefile CI
+name: Makefile Continuous Integration
 
 on:
   push:
@@ -15,15 +15,26 @@ jobs:
 
     steps:
     - uses: actions/checkout@v3
+    
+    - name: Login to Docker Hub
+      uses: docker/login-action@v1
+      with:
+        username: ${{ secrets.DOCKER_USERNAME }}
+        password: ${{ secrets.DOCKERHUBTOKEN }}
 
-   # - name: configure
-    #  run: ./configure
+    - name: Login to Github Packages
+      uses: docker/login-action@v2
+      with:
+        registry: ghcr.io
+        username: ${{ github.actor }}
+        password: ${{ secrets.GITHUB_TOKEN }}
 
-    - name: Make
-      run: make
+    - name: Run the makefile to make the image and push it to DockerHub
+      run: make build push
 
-   # - name: Run check
-   #   run: make check
+    - name: tag the image so it can be sent to gchr.io
+      run: docker tag t288msd/spyserver ghcr.io/t288msd/spyserver:latest
 
-   # - name: Run distcheck
-   #   run: make distcheck
+    - name: push to ghcr.io
+      run: docker push ghcr.io/t288msd/spyserver:latest
+    
