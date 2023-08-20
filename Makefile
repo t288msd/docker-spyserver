@@ -1,5 +1,5 @@
 build:
-	docker buildx build --platform arm64 -t t288msd/spyserver -f Dockerfile .
+	docker build -t t288msd/spyserver -f Dockerfile .
 	
 
 push:
