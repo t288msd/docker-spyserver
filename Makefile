@@ -3,6 +3,6 @@ build:
 	
 
 push:
-	docker push t288msd/spyserver:latest
+	docker push t288msd/spyserver:linux/arm64/v8
 
 .PHONY: build
