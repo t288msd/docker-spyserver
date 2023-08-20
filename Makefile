@@ -1,9 +1,9 @@
 build:
-	docker build -t t288msd/spyserver -f Dockerfile .
+	docker build -t t288msd/docker-spyserver -f Dockerfile .
 	
 
 push:
-	docker push t288msd/spyserver:latest
+	docker push t288msd/docker-spyserver:latest
 
 .PHONY: build
  
