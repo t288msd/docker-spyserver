@@ -45,7 +45,7 @@ This will create a directory called docker-spyserver and install several files, 
 4. adjust the `docker-compose.yml` to your required settings (defaults typically work)
 5. Run: `docker compose up -d` which will build the image and start the container
 6. Check the docker compose logs and fix the errors `docker logs docker-spyserver` ("[R82XX] PLL not locked!" is normal and not an error)
-7. Start SDRSharp or similar on your PC. Change the Source to `sdr://<pi4 ip address>:5555` eg. sdr://192.168.1.213:5555
+7. Start SDRSharp or similar on your PC. Change the Source to `sdr://<pi ip address>:5555` eg. sdr://192.168.1.213:5555
 
 and if all is well you can tune it the frequency of choice!
 
