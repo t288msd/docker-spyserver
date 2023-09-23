@@ -5,11 +5,13 @@ services:
     environment:
       - LIST_IN_DIRECTORY=0
       - DEVICE_TYPE=RTL-SDR
-      - DEVICE_SERIAL=0x1
+# 0 to find first avail dongle. for more than one dongle use format 0x1 or 0x2
+      - DEVICE_SERIAL=0
       - BIND_PORT=5555
     ports:
       - "5555:5555"
-    image: t288msd/docker-spyserver:latest
+ #   image: t288msd/docker-spyserver:latest
+    build: .
     devices:
       - "/dev/bus/usb"
     cap_add:
