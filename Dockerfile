@@ -12,7 +12,7 @@ RUN set -ex; \
     rm spyserver-arm32.tgz;\
   elif [ $(arch) = "aarch64" ]; then \
     echo "arm64";\
-    wget https://airspy.com/?ddownload=5795 -O spyserver-linux-arm64.tgz;\
+    wget https://airspy.com/?ddownload=5795 -O spyserver-arm64.tgz;\
     tar xvzf spyserver-arm64.tgz;\
     rm spyserver-arm64.tgz;\
   else echo "neither armv7 nor aarch64 found";\
