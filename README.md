@@ -51,3 +51,4 @@ and if all is well you can tune it the frequency of choice!
 
 PS. be sure to blacklist the default drivers and install rtl-sdr specific drivers 
 
+(NTS: 'make build push')
